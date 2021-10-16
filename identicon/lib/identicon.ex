@@ -23,15 +23,13 @@ defmodule Identicon do
   def build_grid(%Image{hex: hex}) do
     hex
     |> Enum.chunk_every(3)
-    |> mirror_row
+    |> Enum.map(&mirror_row/1)
+    |> List.pop_at(5)
+    |> then(fn({_, list}) -> list end)
   end
 
-  def mirror_row([[a, b, c] | rest], list \\ []) do
-    list = List.flatten(list, [a, b, c, b, a])
-
-    cond do
-      rest == ['A'] -> Enum.chunk_every(list, 5)
-      true -> mirror_row(rest, list)
-    end
+  def mirror_row([_]), do: nil
+  def mirror_row([first, second | _tail] = row) do
+    row ++ [second, first]
   end
 end
