@@ -18,3 +18,11 @@ defmodule Struct do
     %{ colors | primary: "yellow" }
   end
 end
+
+defmodule KeywordLists do
+  def keyword do
+    colors = [{:primary, "red"}, {:secondary, "green"}]
+    colors = [primary: "red", secondary: "green"]
+    colors[:primary]
+  end
+end
