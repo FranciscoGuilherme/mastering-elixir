@@ -16,16 +16,20 @@ defmodule Identicon do
   end
 
   def pick_color(%Image{hex: [a, b, c | _tail]} = image) do
-    #[a, b, c | _tail] = image.hex
     %Image{image | color: {a, b, c}}
   end
 
-  def build_grid(%Image{hex: hex}) do
-    hex
-    |> Enum.chunk_every(3)
-    |> Enum.map(&mirror_row/1)
-    |> List.pop_at(5)
-    |> then(fn({_, list}) -> list end)
+  def build_grid(%Image{hex: hex} = image) do
+    grid =
+      hex
+      |> Enum.chunk_every(3)
+      |> Enum.map(&mirror_row/1)
+      |> List.pop_at(5)
+      |> then(fn({_, list}) -> list end)
+      |> List.flatten
+      |> Enum.with_index
+
+    %Image{image | grid: grid}
   end
 
   def mirror_row([_]), do: nil
