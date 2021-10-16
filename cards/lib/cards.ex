@@ -1,4 +1,7 @@
 defmodule Cards do
+  @moduledoc """
+    Teste de documentação de módulo
+  """
   require Logger
 
   def hello do
@@ -25,7 +28,6 @@ defmodule Cards do
     end
   end
 
-
   def solving do
     create_deck()
     |> List.flatten()
@@ -39,6 +41,14 @@ defmodule Cards do
     Enum.member?(deck, card)
   end
 
+  @doc """
+    Teste de documentação de função
+
+  ## Examples
+    iex> deck = Cards.create_deck_ok
+    iex> deck = Cards.shuffle(deck)
+    iex> hand = Cards.deal(deck, 4)
+  """
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
     |> then(fn({head, _}) -> head end)
