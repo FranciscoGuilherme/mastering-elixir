@@ -48,7 +48,7 @@ defmodule Cards do
   ## Examples
     iex> deck = Cards.create_deck_ok
     iex> deck = Cards.shuffle(deck)
-    iex> hand = Cards.deal(deck, 4)
+    iex> Cards.deal(deck, 4)
   """
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
