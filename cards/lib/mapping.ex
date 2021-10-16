@@ -1,4 +1,4 @@
-defmodule Struct do
+defmodule Mapping do
   def maps_structure do
     colors = %{primary: "red", secondary: "blue"}
     %{secondary: secondary_color} = colors
@@ -16,13 +16,5 @@ defmodule Struct do
   def update_maps_sintax do
     colors = %{primary: "red", secondary: "blue"}
     %{ colors | primary: "yellow" }
-  end
-end
-
-defmodule KeywordLists do
-  def keyword do
-    colors = [{:primary, "red"}, {:secondary, "green"}]
-    colors = [primary: "red", secondary: "green"]
-    colors[:primary]
   end
 end

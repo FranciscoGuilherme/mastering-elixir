@@ -1,8 +1,9 @@
 defmodule Cards do
+  require Logger
+
   @moduledoc """
     Teste de documentação de módulo
   """
-  require Logger
 
   def hello do
     "hi there!"
@@ -79,7 +80,7 @@ defmodule Cards do
     end
   end
 
-  def read_file_simple_I(filename) do
+  def read_file_2(filename) do
     try do
       {_, binary} = File.read(filename)
 
@@ -90,7 +91,7 @@ defmodule Cards do
     end
   end
 
-  def read_file_simple_II(filename) do
+  def read_file_3(filename) do
     {status, binary} = File.read(filename)
 
     case status do
@@ -99,7 +100,7 @@ defmodule Cards do
     end
   end
 
-  def read_file_simple_III(filename) do
+  def read_file_4(filename) do
     case File.read(filename) do
       {:ok, binary} -> :erlang.binary_to_term(binary)
       {:error, _} -> "Erro ao processar o arquivo: #{filename}"
