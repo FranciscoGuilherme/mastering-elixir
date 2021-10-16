@@ -6,6 +6,8 @@ defmodule Identicon do
     |> hash_input
     |> pick_color
     |> build_grid
+    |> filter_odd_squares
+    |> build_pixel_map
   end
 
   def hash_input(input) do
@@ -35,5 +37,27 @@ defmodule Identicon do
   def mirror_row([_]), do: nil
   def mirror_row([first, second | _tail] = row) do
     row ++ [second, first]
+  end
+
+  def filter_odd_squares(%Image{grid: grid} = image) do
+    grid = Enum.filter(grid, fn({code, _index}) ->
+      rem(code, 2) == 0
+    end)
+
+    %Image{image | grid: grid}
+  end
+
+  def build_pixel_map(%Image{grid: grid} = image) do
+    pixel_map = Enum.map(grid, fn({_code, index}) ->
+      horizontal = rem(index, 5) * 50
+      vertical = div(index, 5) * 50
+
+      top_left = {horizontal, vertical}
+      botton_right = {horizontal + 50, vertical + 50}
+
+      {top_left, botton_right}
+    end)
+
+    %Image{image | pixel_map: pixel_map}
   end
 end
