@@ -1,0 +1,40 @@
+<mxfile host="65bd71144e">
+    <diagram id="hVWNacycG0EmZBMDkKeU" name="Phoenix">
+        <mxGraphModel dx="180" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="48" value="OO Programming" style="shape=umlFrame;whiteSpace=wrap;html=1;width=150;height=30;boundedLbl=1;verticalAlign=middle;align=center;spacingLeft=5;rounded=0;sketch=0;fontColor=#333333;strokeColor=#666666;fillColor=#f5f5f5;" parent="1" vertex="1">
+                    <mxGeometry x="880" y="40" width="200" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="50" target="51" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="ControllerBaseClass" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#000000;fontFamily=Verdana;" parent="1" vertex="1">
+                    <mxGeometry x="915" y="90" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="TopicController" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#000000;fontFamily=Verdana;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="200" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="OO Programming" style="shape=umlFrame;whiteSpace=wrap;html=1;width=150;height=30;boundedLbl=1;verticalAlign=middle;align=center;spacingLeft=5;rounded=0;sketch=0;fontColor=#333333;strokeColor=#666666;fillColor=#f5f5f5;" vertex="1" parent="1">
+                    <mxGeometry x="1120" y="40" width="270" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="ControllerBaseClass" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#000000;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="1140" y="90" width="225" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="init" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#000000;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="1185" y="140" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="handle_request" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#000000;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="1185" y="180" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="TopicController" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#000000;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="1140" y="290" width="225" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="new" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#000000;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="1185" y="340" width="180" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
