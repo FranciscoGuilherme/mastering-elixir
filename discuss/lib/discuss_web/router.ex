@@ -25,6 +25,15 @@ defmodule DiscussWeb.Router do
     resources "/", TopicController
   end
 
+  scope "/auth" do
+    pipe_through :browser
+
+    #/auth/github
+    #/auth/github/callback
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+  end
+
   if Mix.env() in [:dev, :test] do
     import Phoenix.LiveDashboard.Router
 
