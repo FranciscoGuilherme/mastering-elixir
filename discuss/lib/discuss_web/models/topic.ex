@@ -3,6 +3,7 @@ defmodule DiscussWeb.Models.Topic do
 
   schema "topics" do
     field :title, :string
+    belongs_to :users, DiscussWeb.Models.User
 
     timestamps([type: :utc_datetime_usec])
   end
