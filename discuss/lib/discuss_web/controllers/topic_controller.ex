@@ -1,5 +1,6 @@
 defmodule DiscussWeb.TopicController do
   use DiscussWeb, :controller
+  plug DiscussWeb.Plugs.RequireAuth when action in [:new, :create, :edit, :update, :delete]
 
   alias Discuss.Repo
   alias DiscussWeb.Models.Topic

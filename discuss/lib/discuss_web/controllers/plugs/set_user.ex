@@ -3,8 +3,8 @@ defmodule DiscussWeb.Plugs.SetUser do
   import Phoenix.Controller
 
   alias Discuss.Repo
-  alias Discuss.Router.Helpers
   alias DiscussWeb.Models.User
+  alias DiscussWeb.Router.Helpers, as: Routes
 
   def init(_params) do
   end
