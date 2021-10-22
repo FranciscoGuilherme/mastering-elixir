@@ -32,4 +32,10 @@ defmodule DiscussWeb.AuthController do
       user -> {:ok, user}
     end
   end
+
+  def signout(conn, _params) do
+    conn
+    |> configure_session(drop: true)
+    |> redirect(to: Routes.topic_path(conn, :index))
+  end
 end
